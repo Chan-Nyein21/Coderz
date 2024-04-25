@@ -1,0 +1,30 @@
+
+Transaction Details:
+Account Number: 001, Balance: 1200.0Time: Wed Apr 24 09:30:58 UTC 2024
+
+Transaction Details:
+Account Number: 001 , After Deposite Balance: 4000.0Time: Thu Apr 25 12:29:49 UTC 2024
+
+Transaction Details:
+Account Number: HelloWorld , After transfer Balance: 200.0Time: Thu Apr 25 12:34:19 UTC 2024
+
+Transaction Details:
+Account Number: 001 , After receive Balance: 4400.0Time: Thu Apr 25 12:34:19 UTC 2024
+
+Transaction Details:
+Account Number: 001 , After transfer Balance: 700.0Time: Thu Apr 25 12:37:13 UTC 2024
+
+Transaction Details:
+Account Number: 002 , After receive Balance: 2300.0Time: Thu Apr 25 12:37:13 UTC 2024
+
+Transaction Details:
+Account Number: 001 , After withdraw Balance: 500.0Time: Thu Apr 25 12:37:38 UTC 2024
+
+Transaction Details:
+Account Number: 002 , After Deposite Balance: 1300.0Time: Thu Apr 25 12:39:09 UTC 2024
+
+Transaction Details:
+Account Number: 002 , After transfer Balance: 101300.0Time: Thu Apr 25 12:40:28 UTC 2024
+
+Transaction Details:
+Account Number: 002 , After receive Balance: 101300.0Time: Thu Apr 25 12:40:28 UTC 2024

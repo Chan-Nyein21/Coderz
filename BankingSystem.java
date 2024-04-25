@@ -33,12 +33,13 @@ public class BankingSystem {
                 Close_system();
             }
             else{
+                System.out.println("Please selece 1 or 2 or 3.");
                 SignUp_Or_SignIn(bank);
             }
         
         }catch(InputMismatchException exception){
             System.out.println();
-            System.out.println("Please enter 1 or 2");
+            System.out.println("Please enter 1 or 2 or 3.");
             System.out.println();
             SignUp_Or_SignIn(bank);
         }
@@ -87,7 +88,7 @@ public class BankingSystem {
 
     public static void Control(Account acc , Bank bank){
         try{
-            System.out.print("What do you want to do?\n 1. Deposite\n 2. Withdraw\n 3. Transfer\nChoose : ");
+            System.out.print("What do you want to do?\n 1. Deposite\n 2. Withdraw\n 3. Transfer\n 4. Check Balance \nChoose : ");
                 int chooseTwo = scanner.nextInt();
                 if( chooseTwo == 1){
 
@@ -99,7 +100,10 @@ public class BankingSystem {
                 }else if(chooseTwo ==3){
                     
                     Transfer(acc , bank);
-                }else{
+                }else if(chooseTwo == 4){
+                    CheckBalance(acc , bank);
+                }
+                else{
                     System.out.println("Invalid option.\tPlease choose 1 or 2 or 3.");
                     Control(acc, bank);
                 }
@@ -108,6 +112,18 @@ public class BankingSystem {
             Control(acc, bank);
         }
         
+    }
+
+    private static void CheckBalance(Account acc, Bank bank) {
+        
+        try{
+           System.out.println("You have " + acc.getBalance() + " in your account.");
+           Control(acc, bank);
+        }catch(Exception exception){
+            System.out.println("System Error.");
+            SignUp_Or_SignIn(bank);
+        }
+
     }
 
     public static void SignUp(Bank bank){
@@ -157,16 +173,21 @@ public class BankingSystem {
                     checkacc = true;
                     System.out.print("Enter the amount you want to transfer\t: ");
                     double transfer_amount = scanner.nextDouble();
-                    receiver = accounts.get(i);
-                    Transaction.makeWithdrawal(account, transfer_amount);
-                    Transaction.makeDeposit(receiver, transfer_amount);
+                    if(transfer_amount <=0 ){
+                        System.out.println("Invalid amount. \t***Amount should be greater than 0.***\n");
+                        Transfer(account, bank);
+                    }else{
+                        receiver = accounts.get(i);
+                        Transaction.makeWithdrawal(account, transfer_amount);
+                        Transaction.makeDeposit(receiver, transfer_amount);
 
-                    System.out.println("Transfer "+ transfer_amount +" to " + receiveStr + " account is successful.\n");
-                    System.out.println("Account balances after transactions:");
-                    System.out.print("Username: " + account.getUsername() + ", Balance: " + account.getBalance());
-                    writeTransactionToFile(account);            
-                    writeTransactionToFile(receiver);
-                    Logout(account, bank);
+                        System.out.println("Transfer "+ transfer_amount +" to " + receiveStr + " account is successful.\n");
+                        System.out.println("Account balances after transactions:");
+                        System.out.print("Username: " + account.getUsername() + ", Balance: " + account.getBalance());
+                        writeTransactionToFile(account , "transfer");            
+                        writeTransactionToFile(receiver , "receive");
+                        Logout(account, bank);
+                    }
                 }
 
             }
@@ -191,13 +212,18 @@ public class BankingSystem {
         System.out.print("Enter the amount you want to withdraw\t: ");
         try{
             double withdrawAmount = scanner.nextDouble();
-            Transaction.makeWithdrawal(account, withdrawAmount);
+            if(withdrawAmount <=0){
+                System.out.println("Invalid amount. \t***Amount should be greater than 0.***\n");
+                System_Withdraw(account, bank);
+            }else{
+                Transaction.makeWithdrawal(account, withdrawAmount);
 
-            System.out.println("Withdraw "+ withdrawAmount +" from your account is successful.\n");
-            System.out.println("Account balances after transactions:");
-            System.out.println("Username: " + account.getUsername() + ", Balance: " + account.getBalance());
-            writeTransactionToFile(account);
-            Logout(account, bank);
+                System.out.println("Withdraw "+ withdrawAmount +" from your account is successful.\n");
+                System.out.println("Account balances after transactions:");
+                System.out.println("Username: " + account.getUsername() + ", Balance: " + account.getBalance());
+                writeTransactionToFile(account , "withdraw");
+                Logout(account, bank);
+            }
 
         }catch(NumberFormatException exception){
             System.out.println("Withdraw amount cannot contains characters.");
@@ -212,11 +238,14 @@ public class BankingSystem {
 
             try{
                 double depositeAmount = scanner.nextDouble();
+                if(depositeAmount <= 0){
+                    System.out.println("Invalid amount.\t***Amount should be greater than 0.***\n");
+                }
                 Transaction.makeDeposit(account, depositeAmount);
                 System.out.println("Deposite "+ depositeAmount +" to your account is successful.\n");
                 System.out.println("Account balances after transactions:");
                 System.out.println("Username: " + account.getUsername() + ", Balance: " + account.getBalance());
-                writeTransactionToFile(account);
+                writeTransactionToFile(account , "Deposite");
                 Logout(account, bank);
                 
             }catch(NumberFormatException exception){
@@ -236,13 +265,13 @@ public class BankingSystem {
             }
     }
 
-    public static void writeTransactionToFile(Account account) {
+    public static void writeTransactionToFile(Account account , String text) {
         String filename = "transaction_details.txt";
         Date currentTime = new Date();
 
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(filename , true))) {
             writer.write("\nTransaction Details:\n");
-            writer.write("Account Number: " + account.getUsername() + ", Balance: " + account.getBalance() + "Time: " + currentTime + "\n");
+            writer.write("Account Number: " + account.getUsername() +  " , After "+ text +" Balance: " + account.getBalance() + "Time: " + currentTime + "\n");
             
             System.out.println();
             // System.out.println("Transaction details written to " + filename);
