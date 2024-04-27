@@ -25,10 +25,11 @@ class Account implements BankAccount{
         this.password = password;
     }
 
+@Override
     public String getUsername() {
         return username;
     }
-
+@Override
     public double getBalance() {
         return balance;
     }

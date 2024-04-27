@@ -88,3 +88,21 @@ Account Number: 001 , After transfer Balance: 0.0Time: Sat Apr 27 08:21:16 UTC 2
 
 Transaction Details:
 Account Number: 002 , After receive Balance: 3000.0Time: Sat Apr 27 08:21:16 UTC 2024
+
+Transaction Details:
+Account Number: 001 , After Deposite Balance: 3000.0Time: Sat Apr 27 12:52:07 UTC 2024
+
+Transaction Details:
+Account Number: 001 , After withdraw Balance: 2500.0Time: Sat Apr 27 12:52:47 UTC 2024
+
+Transaction Details:
+Account Number: 001 , After transfer Balance: 1500.0Time: Sat Apr 27 12:54:04 UTC 2024
+
+Transaction Details:
+Account Number: 002 , After receive Balance: 3000.0Time: Sat Apr 27 12:54:04 UTC 2024
+
+Transaction Details:
+Account Number: 001 , After transfer Balance: 1000.0Time: Sat Apr 27 12:57:42 UTC 2024
+
+Transaction Details:
+Account Number: HelloWorld , After receive Balance: 10500.0Time: Sat Apr 27 12:57:42 UTC 2024
