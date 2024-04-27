@@ -32,13 +32,12 @@ class Account implements BankAccount{
     public double getBalance() {
         return balance;
     }
-
-    
+@Override
     public void deposit(double amount) {
         balance += amount;
     }
 
-    
+ @Override   
     public void withdraw(double amount) throws InsufficientFundsException {
         if (amount > balance) {
             throw new InsufficientFundsException("Insufficient funds");
