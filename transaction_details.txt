@@ -28,3 +28,63 @@ Account Number: 002 , After transfer Balance: 101300.0Time: Thu Apr 25 12:40:28 
 
 Transaction Details:
 Account Number: 002 , After receive Balance: 101300.0Time: Thu Apr 25 12:40:28 UTC 2024
+
+Transaction Details:
+Account Number: Hi , After Deposite Balance: 32000.0Time: Thu Apr 25 16:22:30 UTC 2024
+
+Transaction Details:
+Account Number: Hi , After transfer Balance: 12000.0Time: Thu Apr 25 16:24:58 UTC 2024
+
+Transaction Details:
+Account Number: 001 , After receive Balance: 21000.0Time: Thu Apr 25 16:24:58 UTC 2024
+
+Transaction Details:
+Account Number: 001 , After Deposite Balance: 2000.0Time: Fri Apr 26 08:17:29 UTC 2024
+
+Transaction Details:
+Account Number: 001 , After withdraw Balance: 1500.0Time: Fri Apr 26 08:17:48 UTC 2024
+
+Transaction Details:
+Account Number: 001 , After Deposite Balance: -500.0Time: Fri Apr 26 08:17:59 UTC 2024
+
+Transaction Details:
+Account Number: 001 , After transfer Balance: -500.0Time: Fri Apr 26 08:20:19 UTC 2024
+
+Transaction Details:
+Account Number: 002 , After receive Balance: 2300.0Time: Fri Apr 26 08:20:19 UTC 2024
+
+Transaction Details:
+Account Number: 001 , After Deposite Balance: 1500.0Time: Fri Apr 26 08:21:45 UTC 2024
+
+Transaction Details:
+Account Number: 002 , After transfer Balance: 2000.0Time: Fri Apr 26 08:24:11 UTC 2024
+
+Transaction Details:
+Account Number: 001 , After receive Balance: 6000.0Time: Fri Apr 26 08:24:11 UTC 2024
+
+Transaction Details:
+Account Number: 001 , After Deposite Balance: 6022.0Time: Fri Apr 26 08:26:13 UTC 2024
+
+Transaction Details:
+Account Number: 001 , After withdraw Balance: 6022.0Time: Fri Apr 26 08:26:33 UTC 2024
+
+Transaction Details:
+Account Number: 001 , After withdraw Balance: 5822.0Time: Fri Apr 26 08:27:56 UTC 2024
+
+Transaction Details:
+Account Number: Hello , After Deposite Balance: 9200.0Time: Fri Apr 26 08:28:22 UTC 2024
+
+Transaction Details:
+Account Number: 001 , After Deposite Balance: 11000.0Time: Sat Apr 27 08:14:35 UTC 2024
+
+Transaction Details:
+Account Number: 001 , After transfer Balance: 11000.0Time: Sat Apr 27 08:15:26 UTC 2024
+
+Transaction Details:
+Account Number: 001 , After receive Balance: 11000.0Time: Sat Apr 27 08:15:26 UTC 2024
+
+Transaction Details:
+Account Number: 001 , After transfer Balance: 0.0Time: Sat Apr 27 08:21:16 UTC 2024
+
+Transaction Details:
+Account Number: 002 , After receive Balance: 3000.0Time: Sat Apr 27 08:21:16 UTC 2024
