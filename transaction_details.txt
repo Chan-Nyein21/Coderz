@@ -106,3 +106,9 @@ Account Number: 001 , After transfer Balance: 1000.0Time: Sat Apr 27 12:57:42 UT
 
 Transaction Details:
 Account Number: HelloWorld , After receive Balance: 10500.0Time: Sat Apr 27 12:57:42 UTC 2024
+
+Transaction Details:
+Account Number: metas , After Deposite Balance: 20000.0Time: Sun Apr 28 08:45:59 UTC 2024
+
+Transaction Details:
+Account Number: metas , After withdraw Balance: 19000.0Time: Sun Apr 28 08:46:10 UTC 2024

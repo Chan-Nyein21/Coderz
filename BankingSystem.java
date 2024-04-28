@@ -33,7 +33,7 @@ public class BankingSystem {
                 Close_system();
             }
             else{
-                System.out.println("Please selece 1 or 2 or 3.");
+                System.out.println("Please select 1 or 2 or 3.");
                 SignUp_Or_SignIn(bank);
             }
         
@@ -89,7 +89,7 @@ public class BankingSystem {
     public static void Control(Account acc , Bank bank){
         try{
             Scanner scanner = new Scanner(System.in);
-            System.out.print("What do you want to do?\n 1. Deposite\n 2. Withdraw\n 3. Transfer\n 4. Check Balance \nChoose : ");
+            System.out.print("What do you want to do?\n 1. Deposit\n 2. Withdraw\n 3. Transfer\n 4. Check Balance \nChoose : ");
                 int chooseTwo = scanner.nextInt();
                 if( chooseTwo == 1){
 
@@ -254,7 +254,7 @@ public class BankingSystem {
 
     public static void System_Deposite(Account account , Bank bank){
 
-        System.out.print("Enter the amount you want to deposite\t: ");
+        System.out.print("Enter the amount you want to deposit\t: ");
 
             try{
                 double depositeAmount = scanner.nextDouble();
@@ -264,7 +264,7 @@ public class BankingSystem {
                 }
                 else{
                     Transaction.makeDeposit(account, depositeAmount);
-                    System.out.println("Deposite "+ depositeAmount +" to your account is successful.\n");
+                    System.out.println("Deposit "+ depositeAmount +" to your account is successful.\n");
                     System.out.println("Account balances after transactions:");
                     System.out.println("Username: " + account.getUsername() + ", Balance: " + account.getBalance());
                     writeTransactionToFile(account , "Deposite");
@@ -272,7 +272,7 @@ public class BankingSystem {
                 }
                 
             }catch(NumberFormatException exception){
-                System.out.println("Deposite amount cannot contains characters.");
+                System.out.println("Deposit amount cannot contains characters.");
                 System_Deposite(account , bank);
             }
     }
